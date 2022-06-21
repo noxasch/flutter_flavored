@@ -60,6 +60,26 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        production {
+            dimension "default"
+            resValue "string", "app_name", "Flavors Example"
+            applicationIdSuffix ""
+        }
+        staging {
+            dimension "default"
+            resValue "string", "app_name", "Flavors Example Staging"
+            applicationIdSuffix ".staging"
+        }
+        development {
+            dimension "default"
+            resValue "string", "app_name", "Flavors Example Dev"
+            applicationIdSuffix ".dev"
+        }
+    }
 }
 
 flutter {
